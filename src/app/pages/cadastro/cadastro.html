@@ -1,0 +1,51 @@
+<div class="cadastro-container d-flex align-items-center justify-content-center py-5">
+  <div class="col-lg-6 col-md-8 col-sm-10">
+    <div class="form-card text-white p-5 rounded-3">
+      <h2 class="text-center mb-4">Falta pouco para a sua aventura!</h2>
+      <p class="text-center mb-4">Preencha os seus dados para agendarmos o seu test drive e revelarmos o Bronco Sport ideal para si.</p>
+      
+      <form [formGroup]="cadastroForm" (ngSubmit)="onSubmit()">
+        
+        <div class="mb-3">
+          <label for="nome" class="form-label">Nome Completo</label>
+          <input type="text" id="nome" class="form-control" formControlName="nome">
+          <div *ngIf="cadastroForm.get('nome')?.invalid && cadastroForm.get('nome')?.touched" class="text-warning mt-1">
+            <small>O nome é obrigatório.</small>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label for="email" class="form-label">E-mail</label>
+          <input type="email" id="email" class="form-control" formControlName="email">
+          <div *ngIf="cadastroForm.get('email')?.invalid && cadastroForm.get('email')?.touched" class="text-warning mt-1">
+            <small *ngIf="cadastroForm.get('email')?.errors?.['required']">O e-mail é obrigatório.</small>
+            <small *ngIf="cadastroForm.get('email')?.errors?.['email']">Por favor, insira um e-mail válido.</small>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <label for="telefone" class="form-label">Telefone</label>
+            <input type="tel" id="telefone" class="form-control" formControlName="telefone">
+            <div *ngIf="cadastroForm.get('telefone')?.invalid && cadastroForm.get('telefone')?.touched" class="text-warning mt-1">
+              <small>O telefone é obrigatório.</small>
+            </div>
+          </div>
+          <div class="col-md-6 mb-3">
+            <label for="cep" class="form-label">CEP</label>
+            <input type="text" id="cep" class="form-control" formControlName="cep">
+            <div *ngIf="cadastroForm.get('cep')?.invalid && cadastroForm.get('cep')?.touched" class="text-warning mt-1">
+              <small>O CEP é obrigatório.</small>
+            </div>
+          </div>
+        </div>
+
+        <div class="d-grid mt-4">
+          <button type="submit" class="btn btn-warning btn-lg fw-bold" [disabled]="cadastroForm.invalid">
+            Ver meu Resultado e Agendar
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

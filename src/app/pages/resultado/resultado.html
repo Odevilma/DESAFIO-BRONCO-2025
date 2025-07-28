@@ -1,0 +1,28 @@
+
+<section class="resultado-section-bronco">
+  <div class="resultado-container-bronco">
+    <div *ngIf="perfil">
+      <h1 class="display-4 fw-bold mb-4">{{ tituloResultado }}</h1>
+      <p class="lead mb-5">{{ textoResultado }}</p>
+
+      <div class="car-display-area">
+        <img [src]="imagemCarroAtual" class="img-fluid car-image" alt="Ford Bronco Sport">
+        <div class="color-swatches">
+          <div class="color-swatch branco" [class.selected]="corSelecionada === 'branco'" (click)="mudarCor('branco')"></div>
+          <div class="color-swatch cinza" [class.selected]="corSelecionada === 'cinza'" (click)="mudarCor('cinza')"></div>
+          <div class="color-swatch vermelho" [class.selected]="corSelecionada === 'vermelho'" (click)="mudarCor('vermelho')"></div>
+          <div class="color-swatch azul" [class.selected]="corSelecionada === 'azul'" (click)="mudarCor('azul')"></div>
+          <div class="color-swatch verde" [class.selected]="corSelecionada === 'verde'" (click)="mudarCor('verde')"></div>
+        </div>
+      </div>
+      
+      <div class="d-grid gap-2 col-md-6 mx-auto mt-5">
+        <button class="btn btn-primary btn-lg" routerLink="/contato">Agendar Test Drive</button>
+        <button class="btn btn-outline-secondary btn-lg" routerLink="/">Voltar ao Início</button>
+      </div>
+    </div>
+    <div *ngIf="!perfil">
+      <p class="lead text-muted">Carregando seu perfil... ou perfil não encontrado.</p>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,7 @@
+/* Adicione estilos para o cabeçalho e o conteúdo principal para espaçamento */
+.router-main {
+  /* Garante que o conteúdo principal ocupe o espaço restante da tela
+     e que haja espaço abaixo do cabeçalho */
+  min-height: calc(100vh - 70px); /* Ajuste 70px para a altura do seu header */
+  padding-top: 0; /* Remova qualquer padding superior extra */
+}

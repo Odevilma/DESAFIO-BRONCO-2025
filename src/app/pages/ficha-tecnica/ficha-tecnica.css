@@ -1,0 +1,19 @@
+/* src/app/pages/ficha-tecnica/ficha-tecnica.css */
+.accordion-button {
+  font-weight: bold;
+  font-size: 1.1em;
+  color: #007bff;
+}
+.accordion-button:not(.collapsed) {
+  color: #0056b3;
+  background-color: #e9f0f7;
+}
+.list-group-item span {
+  font-weight: normal;
+  color: #555;
+}
+/* Estilo para a imagem principal da ficha técnica */
+.col-lg-5 img {
+    max-height: 400px; /* Limita a altura da imagem para não ser muito grande */
+    object-fit: contain; /* Garante que a imagem se ajuste sem cortar */
+}

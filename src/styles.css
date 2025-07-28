@@ -1,0 +1,18 @@
+
+/* src/styles.css */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f0f0f0;
+}
+
+body {
+  padding-top: 80px; /* Ajusta o conteúdo abaixo do cabeçalho */
+}
+
+h1, h2, h3, h4, h5, h6, p, ul {
+  margin: 0;
+  padding: 0;
+}

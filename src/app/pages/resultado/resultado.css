@@ -1,0 +1,156 @@
+
+/* src/app/pages/resultado/resultado.css */
+.resultado-section-bronco {
+  min-height: calc(100vh - 80px);
+  background-color: #1a1a1a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 0;
+  box-sizing: border-box;
+}
+
+.resultado-container-bronco {
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 4rem;
+  border-radius: 15px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+  max-width: 1000px;
+  width: 90%;
+  text-align: center;
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.resultado-container-bronco h1 {
+  color: #fff;
+  font-weight: bold;
+}
+
+.resultado-container-bronco p {
+  color: #ccc;
+}
+
+.car-display-area {
+  margin-top: 30px;
+  margin-bottom: 50px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.car-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5); /* Sombra simples na imagem */
+  /* Se o reflexo que você vê na imagem ainda aparecer, ele está embutido na sua imagem PNG/JPEG.
+     O CSS não pode remover um efeito que já faz parte da própria imagem.
+     Você precisaria de imagens dos carros que já não tivessem o reflexo. */
+  max-height: 500px;
+  object-fit: contain;
+}
+
+.color-swatches {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.color-swatch {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 3px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.color-swatch:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+.color-swatch.selected {
+  border-color: #ff8c00;
+  transform: scale(1.15);
+  box-shadow: 0 0 0 5px rgba(255, 140, 0, 0.4);
+}
+
+.color-swatch.branco { background-color: #f0f0f0; }
+.color-swatch.cinza { background-color: #6c757d; }
+.color-swatch.vermelho { background-color: #dc3545; }
+.color-swatch.azul { background-color: #007bff; }
+.color-swatch.verde { background-color: #28a745; }
+
+.d-grid .btn {
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background-color: #ff8c00;
+  border-color: #ff8c00;
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background-color: #e67e00;
+  border-color: #e67e00;
+  transform: translateY(-2px);
+}
+
+.btn-outline-secondary {
+  border-color: #ccc;
+  color: #ccc;
+  background-color: transparent;
+}
+
+.btn-outline-secondary:hover {
+  background-color: #ccc;
+  color: #1a1a1a;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .resultado-container-bronco {
+    padding: 2.5rem;
+  }
+  .resultado-container-bronco h1 {
+    font-size: 2rem;
+  }
+  .resultado-container-bronco p {
+    font-size: 1rem;
+  }
+  .color-swatch {
+    width: 30px;
+    height: 30px;
+    border-width: 2px;
+  }
+  .color-swatches {
+    gap: 10px;
+  }
+  .d-grid .btn {
+    font-size: 1rem;
+    padding: 12px 25px;
+  }
+}
+
+@media (max-width: 480px) {
+  .resultado-container-bronco {
+    padding: 1.5rem;
+  }
+  .resultado-container-bronco h1 {
+    font-size: 1.8rem;
+  }
+  .color-swatch {
+    width: 25px;
+    height: 25px;
+  }
+}

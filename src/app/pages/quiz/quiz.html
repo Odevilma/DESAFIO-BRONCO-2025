@@ -1,0 +1,23 @@
+<section class="quiz-section-bronco">
+  <div class="progress-bar-container">
+    <div class="progress-bar" [style.width]="(currentQuestionIndex / questions.length) * 100 + '%'"></div>
+  </div>
+  <div class="quiz-container-bronco">
+    <div *ngIf="!quizCompleted" class="quiz-content">
+      <h2 class="question-text-bronco">{{ questions[currentQuestionIndex].question }}</h2>
+      <div class="options-grid-bronco">
+        <button
+          *ngFor="let option of questions[currentQuestionIndex].options"
+          class="btn-option-bronco"
+          [class.selected]="questions[currentQuestionIndex].selected === option"
+          (click)="selectOption(option)">
+          {{ option }}
+        </button>
+      </div>
+    </div>
+    <div *ngIf="quizCompleted" class="quiz-completed-message">
+      <h2>Quiz Concluído!</h2>
+      <p>Você será redirecionado para o resultado.</p>
+    </div>
+  </div>
+</section>
